@@ -1,8 +1,18 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import {
+  type ApplicationConfig,
+  provideExperimentalZonelessChangeDetection,
+  provideZoneChangeDetection,
+} from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes)]
+  providers: [
+    // FIXME: Remove zone.js when it is no longer needed
+    provideZoneChangeDetection(),
+    // The above was not great in bigger apps. so now it can be replaced with zoneless. check the following line
+    // provideExperimentalZonelessChangeDetection(),
+    provideRouter(routes),
+  ],
 };
