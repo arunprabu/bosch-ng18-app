@@ -2,34 +2,35 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ProfileComponent } from '../profile/profile.component';
 import { ReportsComponent } from '../reports/reports.component';
+import { CommonModule } from '@angular/common';
+import { ColorizerDirective } from '../../directives/colorizer.directive';
 
 @Component({
   selector: 'app-concepts',
   standalone: true,
-  imports: [FormsModule, ProfileComponent, ReportsComponent], // FormsModule is needed for ngModel
+  imports: [FormsModule, CommonModule, ProfileComponent, ReportsComponent, ColorizerDirective ], // FormsModule is needed for ngModel
   templateUrl: './concepts.component.html',
   styles: ``,
 })
 export class ConceptsComponent {
   // interpolation
   appName = 'My Big App';
-
   // property binding
   courseName = 'Angular 18';
-
   // two way binding
   courseDuration = 6;
-
   // custom property binding
   profiles = [
     { name: 'Steve', age: 50 },
     { name: 'Will', age: 70 },
   ];
-
   // custom event related
   dataReceivedFromChild: any;
-
   inputValue = 'Angular App Development';
+
+  isLoggedIn = true;
+
+  skills = ['Angular', 'TypeScript', 'JavaScript'];
 
   // event binding
   handleClick() {

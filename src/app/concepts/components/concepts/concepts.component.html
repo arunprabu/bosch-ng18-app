@@ -154,5 +154,50 @@
     tabindex="0"
   >
     <h2>Directives</h2>
+
+    <h3>*ngIf Demo</h3>
+
+    <div class="alert alert-success" *ngIf="isLoggedIn; else notAuthBlock">
+      You are authenticated!
+    </div>
+    <ng-template #notAuthBlock>
+      <div class="alert alert-danger">
+        You are not authenticated! Please login
+      </div>
+    </ng-template>
+
+    <h3>Modern if/else in angular</h3>
+      @if (isLoggedIn) {
+        <div class="alert alert-success">
+          <strong>You are authenticated!</strong>
+        </div>
+      } @else {
+        <div class="alert alert-danger">
+          <strong>You are not authenticated!</strong>
+        </div>
+      }
+
+
+    <h3>*ngFor Demo</h3>
+    <ul>
+      <!-- TODO: learn about findinf index -->
+      <li *ngFor="let skill of skills">{{skill}}</li>
+    </ul>
+
+    <h3>Modern for loop in angular</h3>
+    <ul>
+      @for(skill of skills; track skill) {
+        <li>{{skill}}</li>
+      }
+      
+    </ul>
+
+    <h3>Custom Attribute Directive</h3>
+    <p>ng g d concepts/directives/colorizer</p>
+
+    <div appColorizer>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    </div>
+
   </div>
 </div>

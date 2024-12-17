@@ -175,6 +175,14 @@
     1. Attribute Directives
         examples: routerLink, routerLinkActive, routerLinkActiveOptions, required in form fields 
     2. Structural Directives
+        * impacts will be on structural layer (html)
+
+        1. *ngIf
+        2. *ngFor
+        3. ngSwitch [TODO]
+
+    3. Custom Attribute Directives 
+    4. Custom Structural Directives [TODO] 
 
 
 
@@ -186,6 +194,67 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+### Naming Conventions & Casing
+  #### Casing Types
+  ##### 1. PascalCase 
+      * Recommended for Object Oriented Program's classes 
+      * also Recommended for Interface in TypeScript 
+
+      examples 
+      ---
+        class CarDetails {
+
+        }
+
+        interface Employee {
+
+        }
+
+  ##### 2. camelCase 
+      * Recommended for variables, const, functions, methods in JS & TS 
+      * Recommended for id's of html elements 
+      
+      examples 
+      -----
+        var myCar = 'BMW';
+        var isLoggedIn = true;
+        var hasValidToken = true;
+
+        function getCarInfo() {
+          //....
+        }
+
+  ##### 3. kebab-case
+      * Recommended for URLs 
+      * Recommended for file names, folder names, assets in front end projects  
+      * Recommended for css classes 
+      * okay for id's of html elements if your architect says ok
+
+      examples 
+      -----
+        btn-primary
+        slideshow-container 
+        youtube-logo.png 
+
+  ##### 4. snake_case 
+      * never ever use this. 
+      * okay for const in JS & TS if architect accepts
+
+      examples
+      ---
+        const MAX_STUDENTS_PER_CLASS = 30;
 
 
 
