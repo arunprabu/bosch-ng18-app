@@ -1,7 +1,7 @@
 # Angular 
 ## Building Blocks in Angular
-  1. Components 
-  2. Directives (fn)
+  1. Components [DONE]
+  2. Directives (fn) [DONE]
   3. Services 
   4. Interfaces / Models 
   5. Classes [TODO]
@@ -11,7 +11,7 @@
   9. Interceptors 
 
 ## Concepts
-  1. Data Binding 
+  1. Data Binding [DONE]
   2. Routing [DONE]
   3. HTTP calls 
   4. Forms 
@@ -179,16 +179,45 @@
 
         1. *ngIf
         2. *ngFor
-        3. ngSwitch [TODO]
+        3. ngSwitch [TODO]  also learn @switch
 
     3. Custom Attribute Directives 
+        TODO: Learn about @HostBinding()
     4. Custom Structural Directives [TODO] 
 
 
+## Forms
+
+Types of forms in angular
+
+#### Template Driven Forms
+
+  * created with html
+
+  * easiest
+
+  * validations can be done with directives (required, maxLength, max, etc )
+
+Disadvantages
+
+1\. Not suitable for complex form validation
+
+2\. Not suitable for unit testing
 
 
+#### Reactive Forms (RECOMMENDED)
 
+* created with html + ts
 
+* easy
+
+* validations can be done with angular validators
+
+advantages
+
+1\. suitable for complex form validation
+
+2\. suitable for unit testing
 
 
 
