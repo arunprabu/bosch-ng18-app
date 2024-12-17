@@ -163,12 +163,18 @@
 
   2. Child to Parent Component Communication 
       2.1 using Custom Event Binding (child component is sending the data to the parent)
-      2.2 using @ViewChild()  -- TODO  (parent component accessing the data from child)
+      2.2 using @ViewChild()  -- [TODO]  (parent component accessing the data from child)
 
   3. Any to Any Component Communication
       Using RxJS/Observables, Subscription, Services
 
 ## Directives 
+  * Special Instructions to the DOM 
+
+  Types of Directives
+    1. Attribute Directives
+        examples: routerLink, routerLinkActive, routerLinkActiveOptions, required in form fields 
+    2. Structural Directives
 
 
 
@@ -177,10 +183,32 @@
 
 
 
-<!-- 
-      <p>The current count is: {{ count() }}</p>
-      <button (click)="increment()">Increment</button>
-      --> // count = signal(0);
-  // increment() {
-  //   this.count.set(this.count() + 1);
-  // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="alert alert-success" *ngIf="isLoggedIn">
+        <strong>You are authenticated!</strong>
+      </div>
+
+      @if (isLoggedIn) {
+      <div class="alert alert-success">
+        <strong>You are authenticated!</strong>
+      </div>
+      } @else {
+      <div class="alert alert-danger">
+        <strong>You are not authenticated. Please login</strong>
+      </div>
+      }

@@ -6,7 +6,7 @@ import { ReportsComponent } from '../reports/reports.component';
 @Component({
   selector: 'app-concepts',
   standalone: true,
-  imports: [FormsModule, ProfileComponent, ReportsComponent],
+  imports: [FormsModule, ProfileComponent, ReportsComponent], // FormsModule is needed for ngModel
   templateUrl: './concepts.component.html',
   styles: ``,
 })
@@ -42,8 +42,8 @@ export class ConceptsComponent {
     this.dataReceivedFromChild = event; // setting the child component data in a public var
   }
 
-  handleInputChange(event: any) {
-    console.log(event);
+  handleInputChange(event: any) { // getting event object
+    console.log(event.target.value);
     this.inputValue = event.target.value;
   }
 }

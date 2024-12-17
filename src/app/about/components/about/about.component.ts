@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -8,23 +8,26 @@ import { Component } from '@angular/core';
   template: `
     <div>
       <h1>About</h1>
-      <div class="alert alert-success" *ngIf="isLoggedIn">
-        <strong>You are authenticated!</strong>
-      </div>
-
-      @if (isLoggedIn) {
-      <div class="alert alert-success">
-        <strong>You are authenticated!</strong>
-      </div>
-      } @else {
-      <div class="alert alert-danger">
-        <strong>You are not authenticated. Please login</strong>
-      </div>
-      }
+      <h2>Signals Demo | signal is a way to manage state of the component</h2>
+      <p>Counter: {{ counter() }}</p>
+      <button class="btn btn-success" (click)="handleIncrement()">
+        Increment
+      </button>
     </div>
   `,
-  styles: ``,
+  styles: `
+    h1 {
+      color: green;
+    }
+  `,
 })
 export class AboutComponent {
-  isLoggedIn = false;
+  counter = signal(0); // counter = 0;
+
+  handleIncrement() {
+    // update the state of the counter 
+    this.counter.set(this.counter() + 1);
+  }
+
+  // isLoggedIn = false;
 }
