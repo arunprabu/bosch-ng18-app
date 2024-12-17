@@ -9,13 +9,11 @@ import { MenuComponent } from '../menu/menu.component';
     <footer class="text-center">
       <hr />
       <app-menu></app-menu>
-      <p>Copyright 2024 | Arun</p>
+      <p>Copyright {{ copyrightYear }} | Arun</p>
     </footer>
   `,
 })
 export class FooterComponent {
-  // count = signal(0);
-  // increment() {
-  //   this.count.set(this.count() + 1);
-  // }
+  // interpolation
+  copyrightYear = 2024;
 }
