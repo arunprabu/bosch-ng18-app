@@ -26,4 +26,9 @@ export class EmployeesService {
   getEmployees() {
     return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
+
+  getEmployeeById(id: string) {
+    console.log(id);
+    return this.http.get('https://jsonplaceholder.typicode.com/users/' + id);
+  }
 }

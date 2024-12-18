@@ -2,26 +2,26 @@
 ## Building Blocks in Angular
   1. Components [DONE]
   2. Directives (fn) [DONE]
-  3. Services 
+  3. Services [DONE]
   4. Interfaces / Models 
   5. Classes [TODO]
   6. Modules 
-  7. Guards (fn )
+  7. Guards (fn ) 
   8. Pipes 
   9. Interceptors 
 
 ## Concepts
   1. Data Binding [DONE]
   2. Routing [DONE]
-  3. HTTP calls 
-  4. Forms 
+  3. HTTP calls [DONE]
+  4. Forms [DONE]
   5. Lazy Loading 
 
 ### 7 characteristics of SPA
-  1. Page should NOT refresh 
+  1. Page should NOT refresh [DONE]
   2. URL should be changed  [DONE]
-  3. Browser history should be maintained w/o page refresh 
-  4. Retain header and footer without reloading them again and again 
+  3. Browser history should be maintained w/o page refresh  [DONE]
+  4. Retain header and footer without reloading them again and again  [DONE]
   5. Main Section should have contextual updates [DONE]
   6. Active Menu should be set [TODO]
   7. Page Title should also be changed  [TODO]

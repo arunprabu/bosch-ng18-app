@@ -13,12 +13,13 @@ export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'concepts', component: ConceptsComponent },
   {
-    path: 'employee-management', children: [
+    path: 'employee-management',
+    children: [
       { path: '', component: EmployeesComponent },
       { path: 'add', component: AddEmployeeComponent },
-      { path: '1', component: EmployeeDetailsComponent },
-      { path: '1/edit', component: UpdateEmployeeComponent }
-    ]
+      { path: ':id', component: EmployeeDetailsComponent }, // id is the url param
+      { path: ':id/edit', component: UpdateEmployeeComponent }, // id is the url param
+    ],
   },
   { path: 'products', component: ProductsComponent },
   { path: 'about', component: AboutComponent },
