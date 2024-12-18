@@ -5,7 +5,7 @@
   3. Services [DONE]
   4. Interfaces / Models [DONE]
   5. Classes [TODO]
-  6. Modules 
+  6. Modules [DONE]
   7. Guards (fn ) 
   8. Pipes 
   9. Interceptors 
@@ -15,7 +15,7 @@
   2. Routing [DONE]
   3. HTTP calls [DONE]
   4. Forms [DONE]
-  5. Lazy Loading 
+  5. Lazy Loading [DONE]
 
 ### 7 characteristics of SPA
   1. Page should NOT refresh [DONE]
@@ -273,6 +273,12 @@ Types of forms in angular
     Various method of operators, you can chain on Observables to filter data, sort, retry, catch error, convert
 
 
+Modules
+---
+  1. Feature Module 
+      ng g m products
+  2. Feature Routes
+      create a file named products/products.routes.ts
 
 
 Add Employee
