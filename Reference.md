@@ -3,7 +3,7 @@
   1. Components [DONE]
   2. Directives (fn) [DONE]
   3. Services [DONE]
-  4. Interfaces / Models 
+  4. Interfaces / Models [DONE]
   5. Classes [TODO]
   6. Modules 
   7. Guards (fn ) 

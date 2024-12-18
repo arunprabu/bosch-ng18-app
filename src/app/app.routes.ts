@@ -2,7 +2,6 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/components/home/home.component';
 import { ConceptsComponent } from './concepts/components/concepts/concepts.component';
 import { EmployeesComponent } from './employee-management/components/employees/employees.component';
-import { ProductsComponent } from './products/components/products/products.component';
 import { AboutComponent } from './about/components/about/about.component';
 import { AddEmployeeComponent } from './employee-management/components/add-employee/add-employee.component';
 import { EmployeeDetailsComponent } from './employee-management/components/employee-details/employee-details.component';
@@ -21,6 +20,11 @@ export const routes: Routes = [
       { path: ':id/edit', component: UpdateEmployeeComponent }, // id is the url param
     ],
   },
-  { path: 'products', component: ProductsComponent },
+  // Lazy loading a module
+  {
+    path: 'products',
+    loadChildren: () =>
+      import('./products/products.module').then((m) => m.ProductsModule),
+  },
   { path: 'about', component: AboutComponent },
 ];
