@@ -191,43 +191,21 @@
 Types of forms in angular
 
 #### Template Driven Forms
-
   * created with html
-
   * easiest
-
   * validations can be done with directives (required, maxLength, max, etc )
-
-Disadvantages
-
-1\. Not suitable for complex form validation
-
-2\. Not suitable for unit testing
+  * Disadvantages
+    * 1. Not suitable for complex form validation
+    * 2. Not suitable for unit testing
 
 
 #### Reactive Forms (RECOMMENDED)
-
-* created with html + ts
-
-* easy
-
-* validations can be done with angular validators
-
-advantages
-
-1\. suitable for complex form validation
-
-2\. suitable for unit testing
-
-
-
-
-
-
-
-
-
-
+  * created with html + ts
+  * easy
+  * validations can be done with angular validators
+  * Advantages
+    * 1. suitable for complex form validation
+    * 2. suitable for unit testing
 
 
 
@@ -290,6 +268,23 @@ advantages
 
 
 
+Add Employee
+  https://jsonplaceholder.typicode.com/users             - POST 
+
+List Employees 
+  https://jsonplaceholder.typicode.com/users             - GET 
+
+
+Employee Details
+  https://jsonplaceholder.typicode.com/users/1           - GET  
+
+
+Update Employee Details
+  https://jsonplaceholder.typicode.com/users/1           - PUT / PATCH  
+
+
+Delete Employee 
+  https://jsonplaceholder.typicode.com/users/1           - DELETE
 
 
 
