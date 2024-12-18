@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { IEmployee } from '../models/iemployee';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -23,8 +25,8 @@ export class EmployeesService {
     // NOTE: because we use http client, we need to provide it provideHttpClient(), in app.config.ts
   }
 
-  getEmployees() {
-    return this.http.get('https://jsonplaceholder.typicode.com/users');
+  getEmployees(): Observable<IEmployee[]> {
+    return this.http.get<IEmployee[]>('https://jsonplaceholder.typicode.com/users');
   }
 
   getEmployeeById(id: string) {

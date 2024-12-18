@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { EmployeesService } from '../../services/employees.service';
+import { IEmployee } from '../../models/iemployee';
 
 @Component({
   selector: 'app-employees',
@@ -11,7 +12,7 @@ import { EmployeesService } from '../../services/employees.service';
 })
 export class EmployeesComponent implements OnInit {
   isLoading: boolean = true; // To track loading state
-  employees: any[] = [];
+  employees: IEmployee[] = [];
   errorMessage: string = '';
 
   constructor(private employeesService: EmployeesService) {
@@ -26,7 +27,7 @@ export class EmployeesComponent implements OnInit {
     console.log('2. Inside ngOnInit of EmployeesComponent');
 
     this.employeesService.getEmployees().subscribe({
-      next: (res: any) => { // handle the positive response
+      next: (res: IEmployee[]) => { // handle the positive response
         console.log(res);
         this.isLoading = false;
         this.employees = res;
@@ -34,7 +35,7 @@ export class EmployeesComponent implements OnInit {
       error: (err: any) => { // handle the error
        console.log(err);
        this.isLoading = false;
-       this.errorMessage = "Some error occurred. Please try again later";
+       this.errorMessage = "Some error occurred. "
       },
     });
   }

@@ -264,6 +264,13 @@ Types of forms in angular
         const MAX_STUDENTS_PER_CLASS = 30;
 
 
+### What's Observable?
+    It's a collection that returned over time. 
+    It's a push, that sends multiple values
+    Observable is like restaurant kitchen.
+    If you subscribe to observable, it decides when to give information 
+    Now, What's RxJs?
+    Various method of operators, you can chain on Observables to filter data, sort, retry, catch error, convert
 
 
 
