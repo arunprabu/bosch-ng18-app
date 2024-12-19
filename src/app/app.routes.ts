@@ -8,6 +8,9 @@ import { EmployeeDetailsComponent } from './employee-management/components/emplo
 import { UpdateEmployeeComponent } from './employee-management/components/update-employee/update-employee.component';
 import { LoginComponent } from './auth/components/login/login.component';
 import { authGuard } from './shared/guards/auth.guard';
+import { ContactComponent } from './contact/components/contact/contact.component';
+import { LocationsComponent } from './contact/components/locations/locations.component';
+import { ReactUsComponent } from './contact/components/react-us/react-us.component';
 
 // Have the routing configuration here
 export const routes: Routes = [
@@ -30,4 +33,13 @@ export const routes: Routes = [
   },
   { path: 'about', component: AboutComponent, canActivate: [authGuard] },
   { path: 'login', component: LoginComponent },
+  {
+    path: 'contact',
+    component: ContactComponent,
+    children: [
+      { path: '', redirectTo: 'locations', pathMatch: 'full' }, // Default route
+      { path: 'locations', component: LocationsComponent },
+      { path: 'reach-us', component: ReactUsComponent },
+    ],
+  },
 ];

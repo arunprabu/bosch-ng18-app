@@ -1,0 +1,20 @@
+<!-- contact.component.html -->
+
+<div class="container mt-5">
+  <!-- Navbar for Navigation -->
+  <div class="row">
+    <div class="col-12">
+      <nav class="nav nav-pills">
+        <a class="nav-link" routerLink="./locations" routerLinkActive="active">Locations</a>
+        <a class="nav-link" routerLink="./reach-us" routerLinkActive="active">Reach Us</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Nested Router-Outlets -->
+  <div class="row mt-4">
+    <div class="col-12">
+      <router-outlet></router-outlet> <!-- For loading child components like Locations or Reach Us -->
+    </div>
+  </div>
+</div>
