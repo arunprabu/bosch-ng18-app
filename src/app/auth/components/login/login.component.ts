@@ -109,6 +109,10 @@ export class LoginComponent {
         console.log(res); // getting the token 
         // let's store the token in local storage or session storage
         sessionStorage.setItem('token', res.token);
+
+        // TODO: Redirect to the right page after logging in 
+        // Steps 1: read the query params from the url
+        // Steps 2: redirect to the right page
       })
   }
 }

@@ -6,7 +6,8 @@ import {
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { authInterceptor } from './shared/interceptors/auth.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,6 +16,8 @@ export const appConfig: ApplicationConfig = {
     // The above was not great in bigger apps. so now it can be replaced with zoneless. check the following line
     // provideExperimentalZonelessChangeDetection(),
     provideRouter(routes),
-    provideHttpClient(),
+    provideHttpClient(
+      withInterceptors([authInterceptor])
+    ),
   ],
 };
