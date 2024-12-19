@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CartDataService } from '../../../shared/services/cart-data.service';
 
 @Component({
   selector: 'app-products',
@@ -32,7 +33,10 @@ import { Component } from '@angular/core';
                     <p>{{ product.price }}</p>
                   </div>
                   <div class="col">
-                    <button class="btn btn-success btn-block">
+                    <button
+                      class="btn btn-success btn-block"
+                      (click)="handleAddToCart(product)"
+                    >
                       Add to cart
                     </button>
                   </div>
@@ -79,4 +83,11 @@ export class ProductsComponent {
       price: '$6.13',
     },
   ];
+
+  constructor(private cartDataService: CartDataService) {}
+
+  handleAddToCart(product: any) {
+    console.log(product);
+    this.cartDataService.addToCart(product);
+  }
 }

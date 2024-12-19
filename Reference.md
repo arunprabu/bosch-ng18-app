@@ -16,6 +16,7 @@
   3. HTTP calls [DONE]
   4. Forms [DONE]
   5. Lazy Loading [DONE]
+  6. Any to Any Component Commn [DONE]
 
 ### 7 characteristics of SPA
   1. Page should NOT refresh [DONE]
@@ -75,8 +76,8 @@
 
 
 ## Components in Angular 18
-  1. Standalone Components 
-  2. NgModule based components 
+  1. Standalone Components [DONE]
+  2. NgModule based components  [DONE]
 
 
 ## Routing in Angular
@@ -280,6 +281,16 @@ Modules
   2. Feature Routes
       create a file named products/products.routes.ts
 
+  Pipes 
+  ---
+    utilties for transforming data 
+    1. uppercase 
+    2. lowercase 
+    3. date
+    4. async 
+    5. currency 
+    6. json
+    
 
 Add Employee
   https://jsonplaceholder.typicode.com/users             - POST 
