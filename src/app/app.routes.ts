@@ -6,11 +6,13 @@ import { AboutComponent } from './about/components/about/about.component';
 import { AddEmployeeComponent } from './employee-management/components/add-employee/add-employee.component';
 import { EmployeeDetailsComponent } from './employee-management/components/employee-details/employee-details.component';
 import { UpdateEmployeeComponent } from './employee-management/components/update-employee/update-employee.component';
+import { LoginComponent } from './auth/components/login/login.component';
+import { authGuard } from './shared/guards/auth.guard';
 
 // Have the routing configuration here
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'concepts', component: ConceptsComponent },
+  { path: 'concepts', component: ConceptsComponent, canActivate: [authGuard] },
   {
     path: 'employee-management',
     children: [
@@ -26,5 +28,6 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./products/products.module').then((m) => m.ProductsModule),
   },
-  { path: 'about', component: AboutComponent },
+  { path: 'about', component: AboutComponent, canActivate: [authGuard] },
+  { path: 'login', component: LoginComponent },
 ];
